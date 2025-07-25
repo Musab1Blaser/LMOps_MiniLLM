@@ -12,11 +12,11 @@ do
     done
 
     # # Evaluate KD
-    for seed in 10 20 30 40 50
-    do
-        ckpt="kd/llama-prune-3B-sft"
-        bash ${base_path}/scripts/llama/eval/eval_main_${data}.sh ${base_path} ${port} 1 ${ckpt} --seed $seed  --eval-batch-size 8
-    done
+    # for seed in 10 20 30 40 50
+    # do
+    #     ckpt="kd/llama-prune-3B-sft"
+    #     bash ${base_path}/scripts/llama/eval/eval_main_${data}.sh ${base_path} ${port} 1 ${ckpt} --seed $seed  --eval-batch-size 8
+    # done
 
     # # # Evaluate SeqKD
     # for seed in 10 20 30 40 50
@@ -25,10 +25,10 @@ do
     #     bash ${base_path}/scripts/llama/eval/eval_main_${data}.sh ${base_path} ${port} 1 ${ckpt} --seed $seed  --eval-batch-size 8
     # done
 
-    # # # Evaluate MiniLLM
-    # for seed in 10 20 30 40 50
-    # do
-    #     ckpt="minillm/7B-init-13B-sft/"
-    #     bash ${base_path}/scripts/llama/eval/eval_main_${data}.sh ${base_path} ${port} 1 ${ckpt} --seed $seed  --eval-batch-size 8
-    # done
+    # Evaluate MiniLLM
+    for seed in 10 20 30 40 50
+    do
+        ckpt="minillm/prune-init-3B-sft/"
+        bash ${base_path}/scripts/llama/eval/eval_main_${data}.sh ${base_path} ${port} 1 ${ckpt} --seed $seed  --eval-batch-size 8
+    done
 done

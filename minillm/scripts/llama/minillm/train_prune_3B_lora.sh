@@ -14,12 +14,12 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
 
 # model
 BASE_PATH=${1-"/home/MiniLLM"}
-CKPT_NAME="llama-7B"
+CKPT_NAME="llama-prune"
 CKPT="${BASE_PATH}/checkpoints/${CKPT_NAME}/"
-PEFT_CKPT_NAME="lora-7B-init"
+PEFT_CKPT_NAME="lora-3B-init"
 PEFT_CKPT="${BASE_PATH}/results/llama/train/${PEFT_CKPT_NAME}/"
-TEACHER_CKPT_NAME="13B-sft"
-TEACHER_CKPT="${BASE_PATH}/results/llama/train/sft/llama-13B/"
+TEACHER_CKPT_NAME="3B-sft"
+TEACHER_CKPT="${BASE_PATH}/results/llama/train/sft/llama-3B/"
 # data
 PROMPT_DATA_DIR="${BASE_PATH}/processed_data/dolly/prompt/llama/"
 LM_DATA_DIR="${BASE_PATH}/processed_data/roberta/llama/512/20M/"
