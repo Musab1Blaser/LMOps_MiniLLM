@@ -14,11 +14,11 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
 
 # model
 BASE_PATH=${1-"/home/MiniLLM"}
-CKPT_NAME="llama-7B"
+CKPT_NAME="llama-prune"
 CKPT="${BASE_PATH}/checkpoints/${CKPT_NAME}/"
-TEACHER_CKPT_NAME="llama-13B"
+TEACHER_CKPT_NAME="llama-3B"
 TEACHER_CKPT="${BASE_PATH}/checkpoints/${CKPT_NAME}/"
-TEACHER_PEFT_CKPT_NAME="lora-13B"
+TEACHER_PEFT_CKPT_NAME="lora-3B"
 TEACHER_PEFT_CKPT="${BASE_PATH}/results/llama/train/${TEACHER_PEFT_CKPT_NAME}/"
 MP_SIZE=4
 # data

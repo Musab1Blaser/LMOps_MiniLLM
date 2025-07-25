@@ -14,7 +14,7 @@ DISTRIBUTED_ARGS="--nproc_per_node $GPUS_PER_NODE \
 
 # model
 BASE_PATH=${1-"/home/MiniLLM"}
-CKPT_NAME="llama-7B"
+CKPT_NAME="llama-3B"
 CKPT="${BASE_PATH}/checkpoints/${CKPT_NAME}/"
 # data
 DATA_DIR="${BASE_PATH}/processed_data/dolly/full/llama/"
