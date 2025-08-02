@@ -103,6 +103,7 @@ class PPOTrainer():
         
 
     def setup_optimizer(self):
+        from transformers.optimization import Adafactor
         """
         Returns an optimizer derived from an instance's TRLConfig
         """

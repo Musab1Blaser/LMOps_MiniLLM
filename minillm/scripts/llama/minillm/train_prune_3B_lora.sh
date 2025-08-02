@@ -71,8 +71,8 @@ OPTS+=" --eval-interval 100"
 OPTS+=" --log-interval 16"
 OPTS+=" --mid-log-num 1"
 # lora
-OPTS+=" --teacher-peft-name ${TEACHER_PEFT_CKPT_NAME}"
-OPTS+=" --teacher-peft-path ${TEACHER_PEFT_CKPT}"
+# OPTS+=" --teacher-peft-name ${TEACHER_PEFT_CKPT_NAME}"
+# OPTS+=" --teacher-peft-path ${TEACHER_PEFT_CKPT}"
 # ppo
 OPTS+=" --type minillm"
 OPTS+=" --ppo-epochs 4"
